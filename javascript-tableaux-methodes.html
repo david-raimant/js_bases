@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS tableauxt</title>
+</head>
+<body>
+    <h1>Les tableaux js</h1>
+
+
+<!--    
+.forEach() :
+forEach permet de faire une boucle simplement dans un tableau sans passer par une boucle de type "for" ou "while".
+
+.map() :
+map permet de prendre un tableau et de le convertir en un autre tableau. Il est bien entendu possible de réaliser des changements au niveau des valeurs.
+
+.filter() :
+filter permet de filtrer un tableau selon une certaine condition. Si la condition vaut vraie, alors l'élément actuellement inspecté dans le tableau se retrouvera dans le tableau final filtré, sinon non.
+
+.find() :
+find permet de trouver un élément dans un tableau.
+
+.some() :
+some renvoie true si un élément respectant une certaine condition a été trouvé dans un tableau, false sinon.
+
+.every() :
+every est semblable à some, seulement que cette méthode renvoie true si tous les éléments dans un tableau respectent une certaine condition, false sinon.
+
+.reduce() :
+reduce permet de faire des opérations sur un tableau et de renvoyer une combinaison de ces opérations. Elle prend aussi en paramètre une valeur de départ.
+
+.includes() : 
+includes ne prend pas une fonction mais un simple argument. Elle retourne vrai si l'argument est présent dans le tableau, false si cette valeur n'est pas présente.
+-->
+    
+    
+    <script>
+        let tabPersonnages = [
+            {"nom": "Zeus", "puissance": 300, "prix": 10000},
+            {"nom": "Hadès", "puissance": 200, "prix": 6000},
+            {"nom": "Poséidon", "puissance": 175, "prix": 5000},
+            {"nom": "Achille", "puissance": 165, "prix": 4500},
+            {"nom": "Cyclope", "puissance": 100, "prix": 3000},
+            {"nom": "Titan", "puissance": 250, "prix": 8000},
+            {"nom": "Dragon Noir", "puissance": 220, "prix": 6800},
+            {"nom": "Chevalier", "puissance": 65, "prix": 1800},
+    ]
+
+   
+    /* 
+        //  forEach, affiche le nom des personnages
+       tabPersonnages.forEach(element => {
+        console.log(element.nom);
+    })
+    */
+
+
+
+    /*
+        // map, faire un tableau avec les noms
+
+        let persos = tabPersonnages.map(element =>{
+            return element.nom
+        })
+
+        console.log(persos);
+    */
+
+
+
+
+    /*
+        // map, faire un tableau prix reduction 30%
+
+    let reduction = tabPersonnages.map(element =>{
+            return element.prix - 0.3 * element.prix
+        })
+
+    console.log(reduction);
+    */
+
+
+
+
+    /*
+        // filter, puissance > 150
+
+    let puissants = tabPersonnages.filter(element =>{
+        return element.puissance > 150
+    })
+
+    console.log(puissants);
+    */
+
+
+
+
+     /*
+        // find, trouver un element
+    
+    let achille = tabPersonnages.find(element =>{
+        return element.nom === "Achille"
+    })
+
+    console.log(achille);
+    */
+
+
+
+
+    /*
+        // some, boolean renvoie true ou false si prix > 6000
+
+    let chers = tabPersonnages.some(element =>{
+        return element.prix > 6000
+    })
+
+    console.log(chers);
+    */
+
+
+
+
+    /*
+        // every, renvoie true ou false si tous puissance > 100
+
+    let ensembleFort = tabPersonnages.every(element =>{
+        return element.puissance > 100
+    })
+
+    console.log(ensembleFort);
+    */
+
+
+
+
+    /*  // A REVOIR !!!
+        // reduce, operation sur tableau, ici la somme des prix des perso
+
+    let sommePrix = tabPersonnages.reduce((accumulateur, element) => {
+        return accumulateur + element.prix
+    }, 0)
+
+    console.log(sommePrix);
+    */
+
+
+
+
+    /*
+        // includes, chercher une valeur dans tableau, simple argument et non fonction
+        // renvoie true ou false
+    let  notes = [1, 4, 5, 20];
+    let estPresent = notes.includes(20)
+    console.log(estPresent);
+    */
+
+
+    
+
+    </script>
+</body>
+</html>
